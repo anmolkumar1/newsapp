@@ -1,14 +1,9 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
-export class NavBar extends Component {
-  static propTypes = {
-
-  }
-
-  render() {
+const NavBar =()=> {
     return (
-        <nav className={`navbar navbar-expand-lg navbar-dark bg-dark`}>
+      <nav className={`navbar fixed-top navbar-expand-lg navbar-dark bg-dark`}>
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             NewsMonkey
@@ -31,14 +26,38 @@ export class NavBar extends Component {
                   Home
                 </Link>
               </li>
-              <li className="nav-item"><Link className="nav-link" to="/sports">Sports </Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/health">Health </Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/science">Science </Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/business">Business </Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/entertainment">Entertainment </Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/technology">Technology </Link></li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/sports">
+                  Sports{" "}
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/health">
+                  Health{" "}
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/science">
+                  Science{" "}
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/business">
+                  Business{" "}
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/entertainment">
+                  Entertainment{" "}
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/technology">
+                  Technology{" "}
+                </Link>
+              </li>
             </ul>
-      
+
             {/* <div className="form-check form-switch">
               <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
               <label className={`form-check-label text-${props.mode=== 'dark'  ? 'white' : 'black'}`} htmlFor="flexSwitchCheckDefault">Enable darkmode</label>
@@ -46,8 +65,7 @@ export class NavBar extends Component {
           </div>
         </div>
       </nav>
-    )
-  }
+    );
 }
 
-export default NavBar
+export default NavBar;
